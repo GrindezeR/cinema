@@ -1,4 +1,4 @@
-import Application from '@/app/app';
+import Application from '@/application/application';
 import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });

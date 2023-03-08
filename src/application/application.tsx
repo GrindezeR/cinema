@@ -6,18 +6,24 @@ type TData = {
 
 const Application = () => {
   const [data, setData] = useState<TData>();
+
   console.warn('RENDER');
+
   useEffect(() => {
-    fetch(`http://localhost:3000/api/hello`)
-      .then(res => res.json())
-      .then(data => setData(data));
+    const getData = async () => {
+      const response = await (
+        await fetch(`http://localhost:3000/api/hello`)
+      ).json();
+      setData(response);
+    };
+    getData();
   }, []);
 
-  if (!data) return null;
+  if (!data) return <span>...LOADING...</span>;
 
   return (
     <>
-      <div>Name:{data.name}</div>
+      <div>Name: {data.name}</div>
     </>
   );
 };
