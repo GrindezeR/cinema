@@ -23,7 +23,9 @@ const Application = () => {
 
   return (
     <>
-      <div>Name: {data.name}</div>
+      <div className='flex-center-between btn-primary w-1/2 p-2 m-2'>
+        Name: {data.name}
+      </div>
     </>
   );
 };
