@@ -131,6 +131,9 @@ module.exports = {
             objectFit: 'cover',
             pointerEvents: 'none',
           },
+          '.test-border': {
+            border: '1px solid red',
+          },
         });
     }),
   ],
